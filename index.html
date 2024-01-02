@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Arda Kutuk" />
+    <title>ARDA GAME</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <div class="row">
+      <div class="column-left"></div>
+      <div class="column-middle">
+          <div class="center_wrapper">
+            <div class="center_wrapper-topalign"></div>
+            <div class="center_wrapper-centeralign"> 
+              <h1 class="heading"> WELCOME TO THE ARDA'S GAME </h1>
+              <div id="start-container">
+                <button href="#" type="button" class = "btn" id="submitBtn" onclick="playsound();">START</button>
+              </div>
+             </div>
+            <div class="center_wrapper-bottomalign"></div>
+      </div>
+      <div class = "column-right"></div>
+    </div>
+
+    <script>
+      
+       function playsound() {
+          var snd = new Audio('audios/splat.mp3')
+          snd.play();
+          snd.addEventListener('ended', redirectHandler, false);
+        }
+
+       function redirectHandler() {
+          window.location.href = "./game.html";
+        }
+
+    </script>
+  </body>
+</html>
